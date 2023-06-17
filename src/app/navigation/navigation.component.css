@@ -1,0 +1,30 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 230px;
+  background: #e6a7a7;
+  color: #fff;
+}
+
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+img{
+  margin-top: 100px;
+  width: 200px;
+}
+.bgviolet{
+  background-color: #93c5aa;
+}
+.btn{
+  margin-left: auto;
+}

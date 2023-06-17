@@ -1,0 +1,47 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+   
+    <img src="../../assets/ta-logo.png" />
+    <mat-nav-list>
+      <a mat-list-item href="/employe">
+        <mat-icon> how_to_reg </mat-icon>
+        Gestion Employée
+      </a>
+      <a mat-list-item href="/formations">
+        <mat-icon> assignment </mat-icon>
+        Gestion Formation</a>
+      <a mat-list-item href="/sessions">
+        <mat-icon> calendar_today </mat-icon>
+        Gestion Session</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content >
+    <mat-toolbar  class="bgviolet">
+      <!-- user account -->
+      <button class="btn" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>key</mat-icon>
+          <span>logout</span>
+        </button>
+      </mat-menu>
+
+      <!-- end user account -->
+      <button
+        type="button"
+        aria-label="Toggle sng idenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+   <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

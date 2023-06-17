@@ -1,0 +1,24 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  
+  .main-body {
+    padding-top: 20px;
+    margin: 0 auto;
+    max-width: 1348px;
+ 
+  }
+  
+  .action {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .bg{
+    background-color: #000000 !important;
+  
+}
+
+mat-form-field{
+  width: 100%;
+}
